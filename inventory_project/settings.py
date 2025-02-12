@@ -100,17 +100,22 @@ REST_FRAMEWORK = {
     ),
 }
 
-# Google OAuth Settings
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'APP': {
-            'client_id': '889612194170-vur4diptk6bggepjbl967qss5il8qs6t.apps.googleusercontent.com',
-            'secret': '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',
-        },
-        'SCOPE': ['email', 'profile'],
-        'AUTH_PARAMS': {'access_type': 'online'},
-    }
-}
+# # Google OAuth Settings
+# SOCIALACCOUNT_PROVIDERS = {
+#     'google': {
+#         'APP': {
+#             'client_id': '889612194170-vur4diptk6bggepjbl967qss5il8qs6t.apps.googleusercontent.com',
+#             'secret': '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',
+#         },
+#         'SCOPE': ['email', 'profile'],
+#         'AUTH_PARAMS': {'access_type': 'online'},
+#     }
+# }
+
+import os
+
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
 
 # Static Files
 STATIC_URL = 'static/'
