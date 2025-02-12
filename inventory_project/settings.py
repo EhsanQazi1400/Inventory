@@ -73,10 +73,10 @@ WSGI_APPLICATION = 'inventory_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Change to 'sqlite3' for local dev
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
-        'HOST': 'your_db_host',
+        'NAME': 'inventory',
+        'USER': 'inventory',
+        'PASSWORD': 'inventory123',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
@@ -112,10 +112,7 @@ REST_FRAMEWORK = {
 #     }
 # }
 
-# import os
 
-# GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
-# GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
 
 # Static Files
 STATIC_URL = 'static/'
